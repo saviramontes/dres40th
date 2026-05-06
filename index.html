@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="DL May 8"/>
+<meta name="theme-color" content="#1e1b4b"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<title>Disneyland · May 8, 2026</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+body{background:#F2F2F7;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+::-webkit-scrollbar{display:none}
+
+/* Fade transitions */
+.fade-in{animation:fadeIn .35s ease forwards}
+.fade-out{animation:fadeOut .25s ease forwards}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeOut{from{opacity:1}to{opacity:0}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.65}}
+@keyframes dot-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.7}}
+@keyframes banner-in{from{opacity:0;transform:translateY(-6px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+.now-dot{animation:dot-pulse 1.8s infinite}
+.action-banner{animation:banner-in .3s cubic-bezier(.34,1.56,.64,1) forwards}
+</style>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<link rel="shortcut icon" type="image/png" href="data:image/png;base64,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"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://andrea40th.netlify.app/"/>
+<meta property="og:title" content="Dre's 40th 🏰 · Disneyland May 8, 2026"/>
+<meta property="og:description" content="The ultimate Disneyland + DCA itinerary for Dre's 40th birthday. 8 Lightning Lane rides, park-hopper strategy, and live countdown alerts all day."/>
+<meta property="og:image" content="https://andrea40th.netlify.app/social.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Dre's 40th 🏰 · Disneyland May 8, 2026"/>
+<meta name="twitter:description" content="The ultimate Disneyland + DCA itinerary for Dre's 40th birthday."/>
+<meta name="twitter:image" content="https://andrea40th.netlify.app/social.png"/>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────────────────
+// urgency: "standard"=blue | "high"=amber | "critical"=red
+const ITEMS = [
+  { id:"gates",     time24:"07:30", label:"7:30 AM",  title:"Arrive at Gates",                  subtitle:"Queue before rope drop",                   park:"dl",   pass:null,        mp:null,    notifyBefore:20,
+    urgency:null,
+    alertTitle:"🎢 Head to Disneyland NOW",            alertBody:"Arrive by 7:30 AM. App open, Multi Pass ready, party linked.",
+    action:null,
+    details:"Queue before opening. The moment you scan in: buy Rise LL Single Pass AND book Indiana Jones MP (9:45 AM return) — do both simultaneously before you take a step." },
+
+  { id:"smugglers", time24:"08:00", label:"8:00 AM",  title:"Smugglers Run",                     subtitle:"Millennium Falcon — Rope Drop",             park:"dl",   pass:"Rope Drop", mp:null,    notifyBefore:2,
+    urgency:"standard",
+    alertTitle:"🚀 Rope Drop — Head to Smugglers Run!", alertBody:"Walk-on now. Buy Rise LL Single Pass + book Indiana Jones MP (9:45 AM) while in line.",
+    action:"Buy Rise LL Single Pass + Book IJ MP → 9:45 AM return",
+    details:"Rope drop straight here — closest big ride to entrance, walk-on at opening. While in line: buy Rise LL Single Pass AND book Indiana Jones MP (return 9:45 AM) simultaneously." },
+
+  { id:"ronto",     time24:"08:20", label:"8:20 AM",  title:"Ronto Roasters",                    subtitle:"Breakfast — Black Spire Outpost",           park:"food", pass:null,        mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"🥙 Ronto Roasters Breakfast",          alertBody:"On your walk from Smugglers Run to Rise. Get the Ronto Morning Wrap.",
+    action:null,
+    details:"Right on the walk through Black Spire Outpost — zero detour. Ronto Morning Wrap: egg, pork sausage, tangy pepper sauce in a grilled flatbread. Minimal line at 8:20 AM. Eat while walking the final stretch to Rise." },
+
+  { id:"rise",      time24:"08:40", label:"8:40 AM",  title:"Rise of the Resistance",            subtitle:"LL Single Pass return window",              park:"dl",   pass:"LL Single", mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"⚡ Rise of the Resistance — Head There", alertBody:"LL window opens soon. Most spectacular ride at either park. IJ already booked — just enjoy it.",
+    action:null,
+    details:"Use your LL Single Pass return window. The most spectacular ride at either park — a full 20-min immersive experience. Indiana Jones is already booked. Just take it all in." },
+
+  { id:"ij",        time24:"09:45", label:"9:45 AM",  title:"Indiana Jones Adventure",           subtitle:"MP #1 of 8",                               park:"dl",   pass:"LL Multi",  mp:"MP #1", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #1 — Indiana Jones",              alertBody:"Scan in → IMMEDIATELY book Guardians (DCA) for 12:15 PM. One booking only — no Soarin' yet.",
+    action:"Book Guardians (DCA) → 12:15 PM — one booking only, no Soarin' yet",
+    details:"Redeem MP #1. Scan in → immediately book Guardians (DCA, 12:15 PM). Cross-park booking valid since return time is after 11 AM. Do NOT book Soarin' — only one active booking at a time. Soarin' booked at 11:45 AM via 2-hour rule." },
+
+  { id:"startours", time24:"10:10", label:"10:10 AM", title:"Star Tours",                        subtitle:"Tomorrowland — 7 min walk from IJ",         park:"dl",   pass:"Standby",   mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"🌌 Head to Star Tours — Tomorrowland", alertBody:"7-min walk through the Hub. 15–20 min standby at 35% crowds. 18-min buffer before park hop.",
+    action:null,
+    details:"Walk from Indiana Jones through the Hub to Tomorrowland (~7 min). 15–20 min standby at 35% forecast crowds. Randomized Star Wars sequences. Done by ~10:30 AM with 18-min buffer before the 11 AM hop." },
+
+  { id:"hop1",      time24:"10:50", label:"10:50 AM", title:"Park Hop → DCA",                    subtitle:"~10 min walk",                             park:"hop",  pass:null,        mp:null,    notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"🔀 Time to Park Hop to DCA",           alertBody:"Head to DCA. Buy RSR Single Pass the INSTANT you scan in.",
+    action:"Buy RSR Single Pass the INSTANT you scan in at DCA",
+    details:"~10 min walk to DCA. Guardians MP already booked for 12:15 PM. Cars Land accessed via Performance Corridor — direct Avengers Campus walkway is closed for expansion." },
+
+  { id:"rsr",       time24:"11:15", label:"11:15 AM", title:"Radiator Springs Racers",           subtitle:"Crown jewel of DCA",                       park:"dca",  pass:"LL Single", mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"⚡ Radiator Springs Racers — LL Window", alertBody:"Head to RSR. Also check Single Rider line — often faster than LL.",
+    action:null,
+    details:"Crown jewel of DCA. Use your LL Single Pass. Check Single Rider line too — often faster. Gorgeous Cars Land scenery before the racing finale." },
+
+  { id:"junkyard",  time24:"11:45", label:"11:45 AM", title:"Junkyard Jamboree",                 subtitle:"Cars Land — BOOK SOARIN' WHILE IN LINE",   park:"dca",  pass:"Standby",   mp:null,    notifyBefore:0,
+    urgency:"critical",
+    alertTitle:"⚠️ Book Soarin' RIGHT NOW",             alertBody:"2-hour rule unlocks NOW. Book Soarin' for 1:30 PM while in this queue or you lose the window.",
+    action:"BOOK SOARIN' → 1:30 PM now — 2-hour rule unlocks at 11:45 AM",
+    details:"Right in Cars Land — zero extra walking from RSR. CRITICAL: While in this queue it is now exactly 2 hours since booking Guardians at 9:45 AM — book Soarin' immediately for ~1:30 PM return. Do not wait." },
+
+  { id:"guardians", time24:"12:15", label:"12:15 PM", title:"Guardians — Mission: BREAKOUT!",   subtitle:"MP #2 of 8",                               park:"dca",  pass:"LL Multi",  mp:"MP #2", notifyBefore:5,
+    urgency:null,
+    alertTitle:"⚡ MP #2 — Guardians of the Galaxy",   alertBody:"Head to Avengers Campus via Performance Corridor. Soarin' already booked for 1:30 PM.",
+    action:null,
+    details:"Redeem MP #2. Drop tower with randomized Guardians soundtracks. Walk from Cars Land via Performance Corridor. Soarin' already booked for 1:30 PM — no booking needed here." },
+
+  { id:"lunch",     time24:"12:35", label:"12:35 PM", title:"Lunch Break",                       subtitle:"Carthay Circle area",                      park:"food", pass:null,        mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"🍽️ Lunch Time",                        alertBody:"Carthay Circle or Pacific Wharf. 50 min before Soarin' at 1:30 PM. Relax.",
+    action:null,
+    details:"Carthay Circle area or Pacific Wharf. Comfortable 50-min window before 1:30 PM Soarin' return. At 35% crowd forecast you're genuinely ahead of pace — relax." },
+
+  { id:"soarin",    time24:"13:30", label:"1:30 PM",  title:"Soarin' Around the World",          subtitle:"MP #3 of 8 — sit in the TOP ROW",          park:"dca",  pass:"LL Multi",  mp:"MP #3", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #3 — Soarin' Around the World",  alertBody:"SIT IN THE TOP ROW. Book Incredicoaster on scan-in.",
+    action:"Book Incredicoaster → 2:30 PM on scan-in",
+    details:"Redeem MP #3. Hang-gliding simulator over world landmarks. SIT IN THE TOP ROW for the best view. Book Incredicoaster the moment you scan in (~2:30 PM return)." },
+
+  { id:"freetime",  time24:"13:50", label:"1:50 PM",  title:"Free Time — Pixar Pier",            subtitle:"35 min before Incredicoaster",             park:"dca",  pass:null,        mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"😌 Free Time — Pixar Pier",            alertBody:"35 min until Incredicoaster. Wander the pier.",
+    action:null,
+    details:"35 min before Incredicoaster window. Wander Pixar Pier, grab a snack at Adorable Snowman Frosted Treats, enjoy Paradise Bay views." },
+
+  { id:"incredi",   time24:"14:30", label:"2:30 PM",  title:"Incredicoaster",                    subtitle:"MP #4 of 8",                               park:"dca",  pass:"LL Multi",  mp:"MP #4", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #4 — Incredicoaster",             alertBody:"Book WEB Slingers on scan-in. Goofy's Sky School is right next door.",
+    action:"Book WEB Slingers → 3:30 PM on scan-in",
+    details:"Redeem MP #4. DCA's fastest coaster — launched with great Paradise Bay views. Goofy's Sky School is right next door. Book WEB Slingers the moment you scan in." },
+
+  { id:"goofy",     time24:"15:00", label:"3:00 PM",  title:"Goofy's Sky School",                subtitle:"Right next to Incredicoaster",             park:"dca",  pass:"Standby",   mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"✈️ Goofy's Sky School",                alertBody:"Right next to Incredicoaster — zero extra walking. More intense than it looks.",
+    action:null,
+    details:"Right next to Incredicoaster in Paradise Gardens — zero extra walking. Wild mouse coaster with tight turns and surprise drops. Standby only." },
+
+  { id:"websling",  time24:"15:30", label:"3:30 PM",  title:"WEB Slingers: Spider-Man",          subtitle:"MP #5 of 8",                               park:"dca",  pass:"LL Multi",  mp:"MP #5", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #5 — WEB Slingers",              alertBody:"Scan in → book Tiana's (DL) for 4:45 PM — NOT 4:30.",
+    action:"Book Tiana's (DL) → 4:45 PM on scan-in (not 4:30)",
+    details:"Redeem MP #5. Interactive shooter — keep score. Scan in → book Tiana's Bayou Adventure at Disneyland for 4:45 PM. NOT 4:30 — need transit buffer after Grizzly + park walk." },
+
+  { id:"grizzly",   time24:"15:55", label:"3:55 PM",  title:"Grizzly River Run",                 subtitle:"You WILL get wet — use the free lockers",  park:"dca",  pass:"Standby",   mp:null,    notifyBefore:0,
+    urgency:"high",
+    alertTitle:"💦 Grizzly River Run",                 alertBody:"Use the free lockers at the entrance — you WILL get wet.",
+    action:"Use the free lockers — you will get wet",
+    details:"Reopened March 27. River rapids — you WILL get wet. Use the free lockers at entrance. Done ~4:20 PM, time to walk to Disneyland for the 4:45 PM Tiana's window." },
+
+  { id:"hop2",      time24:"16:30", label:"4:30 PM",  title:"Park Hop → Disneyland",             subtitle:"~15 min walk",                             park:"hop",  pass:null,        mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"🔀 Hop Back to Disneyland",            alertBody:"Tiana's window is 4:45 PM. Still light + warm.",
+    action:null,
+    details:"~15 min walk. Tiana's LL window is 4:45–5:45 PM. Still light and warm (~72°F) — ideal timing for the last water ride of the day." },
+
+  { id:"tianas",    time24:"16:45", label:"4:45 PM",  title:"Tiana's Bayou Adventure",           subtitle:"MP #6 of 8 — while it's still warm",       park:"dl",   pass:"LL Multi",  mp:"MP #6", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #6 — Tiana's Bayou Adventure",   alertBody:"First ride back while still light + warm. Book Haunted Mansion on scan-in.",
+    action:"Book Haunted Mansion → 5:30 PM on scan-in",
+    details:"Redeem MP #6. First ride back while still light and warm. Log flume with iconic final drop — light splash. Book Haunted Mansion the moment you scan in." },
+
+  { id:"haunted",   time24:"17:30", label:"5:30 PM",  title:"Haunted Mansion",                   subtitle:"MP #7 of 8",                               park:"dl",   pass:"LL Multi",  mp:"MP #7", notifyBefore:5,
+    urgency:"standard",
+    alertTitle:"⚡ MP #7 — Haunted Mansion",            alertBody:"Book Mickey's Runaway Railroad for 7:30 PM on scan-in.",
+    action:"Book Mickey's Runaway Railroad → 7:30 PM on scan-in",
+    details:"Redeem MP #7. One of the best dark rides anywhere — slow, atmospheric, full of detail. Don't rush it. Book Mickey's Runaway Railroad for 7:30 PM return." },
+
+  { id:"thunder",   time24:"18:30", label:"6:30 PM",  title:"Big Thunder Mountain",              subtitle:"Dinner-hour sweet spot",                   park:"dl",   pass:"Standby",   mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"⛏️ Big Thunder Mountain Railroad",     alertBody:"Dinner-hour sweet spot — lines at their shortest. 15–25 min at 35% crowds.",
+    action:null,
+    details:"Dinner-hour sweet spot — standby drops sharply. At 35% forecast crowds this could be 15–20 min. No MP needed; last slot saved for Mickey's." },
+
+  { id:"dinner",    time24:"19:00", label:"7:00 PM",  title:"Dinner",                            subtitle:"Carnation Café or River Belle Terrace",    park:"food", pass:null,        mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"🍽️ Dinner Time",                       alertBody:"Carnation Café or River Belle Terrace. Mickey's window opens at 7:30 PM.",
+    action:null,
+    details:"Carnation Café or River Belle Terrace (Blue Bayou still closed). Quick 25-min dinner — Mickey's return window opens at 7:30 PM." },
+
+  { id:"mickeys",   time24:"19:30", label:"7:30 PM",  title:"Mickey's Runaway Railroad",         subtitle:"MP #8 of 8 — FINAL MULTI PASS",            park:"dl",   pass:"LL Multi",  mp:"MP #8", notifyBefore:5,
+    urgency:null,
+    alertTitle:"⚡ MP #8 — Mickey's Runaway Railroad 🏁", alertBody:"FINAL Multi Pass of the day. Chain complete after scan-in.",
+    action:"Chain complete after scan-in — rest of night is standby",
+    details:"Redeem MP #8 — FINAL Multi Pass. Trackless dark ride through an animated Mickey world. Chain complete. No more booking after this." },
+
+  { id:"fantasmic", time24:"20:00", label:"8:00 PM",  title:"Claim Fantasmic! Spot",             subtitle:"Rivers of America — confirmed May 8",      park:"dl",   pass:null,        mp:null,    notifyBefore:5,
+    urgency:"high",
+    alertTitle:"🎆 Claim Your Fantasmic! Spot",        alertBody:"Head to Rivers of America now — 45 min before ~9 PM showtime. Get there early.",
+    action:"Head to Rivers of America — arrive 45 min before showtime",
+    details:"Claim a waterfront spot along Rivers of America ~45 min before showtime (~9 PM). Confirmed open May 8 — dark May 4–7 and 11–14; May 8 Friday is in the open window." },
+
+  { id:"matterhorn",time24:"22:00", label:"10:00 PM", title:"Matterhorn Bobsleds",               subtitle:"Late-night bonus — near walk-on",           park:"late", pass:"Standby",   mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"🏔️ Late Night — Matterhorn",           alertBody:"Post-Fantasmic crowds cleared. Walk straight up — ~10-15 min standby.",
+    action:null,
+    details:"Post-Fantasmic crowds clear fast. Walk straight up. At 35% crowds could be near walk-on. Classic rough coaster with Yeti. Saved for this window when lines are shortest." },
+
+  { id:"spacemtn",  time24:"22:30", label:"10:30 PM", title:"Space Mountain",                    subtitle:"Late-night bonus — near walk-on",           park:"late", pass:"Standby",   mp:null,    notifyBefore:5,
+    urgency:null,
+    alertTitle:"🚀 Late Night — Space Mountain",       alertBody:"Near walk-on after 10 PM. Feels wilder at night. End of the bonus round!",
+    action:null,
+    details:"Near walk-on after 10 PM on a 35% crowd day. Darker and wilder at night. Saved here on purpose — shorter wait AND better experience. End of the bonus round." },
+
+  { id:"mainst",    time24:"23:15", label:"11:15 PM", title:"Main Street — Final Walk",          subtitle:"Castle lit at night",                      park:"dl",   pass:null,        mp:null,    notifyBefore:0,
+    urgency:null,
+    alertTitle:"✨ Final Walk Down Main Street",        alertBody:"Castle lit at night, park nearly empty. Take it slowly. You've done it all.",
+    action:null,
+    details:"The castle lit at night with the park nearly empty is one of the best moments at Disneyland. Take it slowly on the way out." },
+];
+
+// ── Styles ────────────────────────────────────────────────────────────────────
+const PARK = {
+  dl:   { bg:"#EEF0FF", dot:"#4F46E5", text:"#3730A3", name:"Disneyland",            hdr:"#312E81" },
+  dca:  { bg:"#ECFDF5", dot:"#059669", text:"#065F46", name:"California Adventure",   hdr:"#064E3B" },
+  late: { bg:"#1F2937", dot:"#6B7280", text:"#F9FAFB", name:"Late Night",             hdr:"#111827" },
+  food: { bg:"#FFF7ED", dot:"#EA580C", text:"#9A3412", name:"Food & Break",           hdr:"#431407" },
+  hop:  { bg:"#FEFCE8", dot:"#CA8A04", text:"#713F12", name:"Park Hop",               hdr:"#451A03" },
+};
+const PASSC = {
+  "LL Single": { bg:"#EDE9FE", text:"#5B21B6", label:"LL Single Pass" },
+  "LL Multi":  { bg:"#D1FAE5", text:"#065F46", label:"LL Multi Pass"  },
+  "Standby":   { bg:"#F3F4F6", text:"#374151", label:"Standby"        },
+  "Rope Drop": { bg:"#FEF3C7", text:"#92400E", label:"Rope Drop"      },
+};
+const URGENCY = {
+  standard: { bg:"#1E3A8A", border:"#3B82F6", text:"#DBEAFE", label:"ACTION" },
+  high:     { bg:"#78350F", border:"#F59E0B", text:"#FEF3C7", label:"HEADS UP" },
+  critical: { bg:"#7F1D1D", border:"#EF4444", text:"#FEE2E2", label:"DO THIS NOW" },
+};
+
+
+// ── Time helpers ──────────────────────────────────────────────────────────────
+function getEventDate(item){
+  var parts=item.time24.split(":"); var h=+parts[0],m=+parts[1];
+  var d=new Date(); d.setFullYear(2026,4,8); d.setHours(h,m,0,0); return d;
+}
+function msUntil(item){ return getEventDate(item)-Date.now(); }
+function getStatus(item){
+  var ms=msUntil(item);
+  if(ms<-50*60*1000)return"past";
+  if(ms<0)return"active";
+  if(ms<25*60*1000)return"soon";
+  return"future";
+}
+function pad(n){ return String(n).padStart(2,"0"); }
+function formatCD(ms){
+  if(ms<=0)return"Now";
+  var s=Math.floor(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=s%60;
+  if(h>0)return h+"h "+pad(m)+"m";
+  if(m>0)return m+"m "+pad(sec)+"s";
+  return sec+"s";
+}
+function formatHMS(ms){
+  if(ms<=0)return"00:00:00";
+  var s=Math.floor(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=s%60;
+  return pad(h)+":"+pad(m)+":"+pad(sec);
+}
+
+// ── State ─────────────────────────────────────────────────────────────────────
+var state={
+  now: Date.now(),
+  expanded: null,
+  notifPerm: (typeof Notification!=="undefined")?Notification.permission:"unsupported",
+  webActive: false,
+  webCount: 0,
+  testSent: false,
+  lastBannerItem: null,
+};
+var webTimers=[];
+
+// ── Haptics ───────────────────────────────────────────────────────────────────
+function vibrate(pattern){
+  try{ if(navigator.vibrate) navigator.vibrate(pattern); }catch(e){}
+}
+
+// ── Render helpers ────────────────────────────────────────────────────────────
+function currentItem(){
+  var active=ITEMS.find(function(i){ var ms=msUntil(i); return ms>=-50*60*1000&&ms<0; });
+  return active||ITEMS.find(function(i){ return msUntil(i)>0; });
+}
+function nextItem(afterItem){
+  var idx=ITEMS.indexOf(afterItem);
+  return ITEMS.slice(idx+1).find(function(i){ return getStatus(i)!=="past"; });
+}
+
+// Rope drop is 8:00 AM — phase switches then
+function isRopeDrop(){
+  var rd=new Date(); rd.setFullYear(2026,4,8); rd.setHours(8,0,0,0);
+  return Date.now()>=rd.getTime();
+}
+
+// ── Notification scheduling ───────────────────────────────────────────────────
+function scheduleWeb(){
+  webTimers.forEach(function(id){ clearTimeout(id); }); webTimers=[];
+  var n=0;
+  ITEMS.forEach(function(item){
+    var delay=(getEventDate(item).getTime()-item.notifyBefore*60*1000)-Date.now();
+    if(delay>0){
+      var id=setTimeout(function(){
+        if(Notification.permission==="granted"){
+          var opts={body:item.alertBody,tag:item.id,requireInteraction:!!item.action};
+          try{ new Notification(item.alertTitle,opts); }catch(e){}
+          vibrate(item.urgency==="critical"?[200,100,200,100,200]:[100,50,100]);
+        }
+      },delay);
+      webTimers.push(id); n++;
+    }
+  });
+  state.webCount=n; state.webActive=n>0;
+}
+async function activateWeb(){
+  if(state.notifPerm!=="granted"){
+    var r=await Notification.requestPermission();
+    state.notifPerm=r;
+  }
+  if(state.notifPerm==="granted"){
+    scheduleWeb();
+    if(state.webCount===0) alert("All event times have already passed today.");
+  }
+  render();
+}
+async function testNotif(){
+  if(state.notifPerm!=="granted"){
+    var r=await Notification.requestPermission();
+    state.notifPerm=r;
+  }
+  if(state.notifPerm==="granted"){
+    new Notification("🎢 Test — Disneyland Itinerary",{body:"Notifications working! Add to Home Screen for background alerts."});
+    state.testSent=true; render();
+    setTimeout(function(){ state.testSent=false; render(); },3000);
+  }
+}
+function cancelWeb(){
+  webTimers.forEach(function(id){ clearTimeout(id); }); webTimers=[];
+  state.webActive=false; state.webCount=0; render();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+var PX_PROPS=new Set(["fontSize","width","height","minWidth","maxWidth","minHeight",
+  "marginTop","marginBottom","marginLeft","marginRight","gap","rowGap","columnGap",
+  "borderRadius","borderTopLeftRadius","borderTopRightRadius","borderBottomLeftRadius",
+  "borderBottomRightRadius","top","left","right","bottom","outlineWidth",
+  "paddingTop","paddingBottom","paddingLeft","paddingRight"]);
+
+function applyStyle(el,styleObj){
+  Object.keys(styleObj).forEach(function(prop){
+    var val=styleObj[prop];
+    if(typeof val==="number"&&PX_PROPS.has(prop)) el.style[prop]=val+"px";
+    else el.style[prop]=val;
+  });
+}
+
+function el(tag,attrs,children){
+  var e=document.createElement(tag);
+  if(attrs) Object.keys(attrs).forEach(function(k){
+    if(k==="style"&&typeof attrs[k]==="object") applyStyle(e,attrs[k]);
+    else if(k.startsWith("on")&&typeof attrs[k]==="function") e.addEventListener(k.slice(2).toLowerCase(),attrs[k]);
+    else if(k==="innerHTML") e.innerHTML=attrs[k];
+    else if(k==="className") e.className=attrs[k];
+    else e.setAttribute(k,attrs[k]);
+  });
+  if(children) [].concat(children).forEach(function(c){
+    if(c==null||c===false)return;
+    e.appendChild(typeof c==="string"?document.createTextNode(c):c);
+  });
+  return e;
+}
+function div(style,children){ return el("div",{style:style},children); }
+function txt(tag,style,text){ var e=el(tag,{style:style}); e.textContent=text; return e; }
+function btn(style,text,onclick){ return el("button",{style:style,onClick:onclick},text); }
+
+function renderHeader(){
+  var cur=currentItem();
+  var next=cur?nextItem(cur):null;
+  var hdrstyle={background:"linear-gradient(155deg,#1e1b4b 0%,#312E81 45%,#4338ca 100%)",padding:"env(safe-area-inset-top,20px) 18px 16px",position:"sticky",top:0,zIndex:50,boxShadow:"0 4px 20px rgba(49,46,129,.5)"};
+
+  // Phase 1 — before rope drop
+  if(!isRopeDrop()){
+    var ropeDropDate=new Date(); ropeDropDate.setFullYear(2026,4,8); ropeDropDate.setHours(8,0,0,0);
+    var msToRD=ropeDropDate-Date.now();
+    var nextUp=ITEMS.find(function(i){ return msUntil(i)>0; });
+
+    return div(hdrstyle,[
+      div({color:"rgba(255,255,255,.5)",fontSize:11,fontWeight:700,letterSpacing:".09em",textTransform:"uppercase",marginBottom:2},"Disneyland Resort"),
+      div({color:"#fff",fontSize:22,fontWeight:800,letterSpacing:"-.5px",marginBottom:2},"May 8, 2026 🎢"),
+      div({color:"rgba(255,255,255,.55)",fontSize:12,marginBottom:14},"Adults · Park Hopper · 8 MPs · 25 events"),
+      div({background:"rgba(255,255,255,.1)",backdropFilter:"blur(12px)",borderRadius:16,padding:"14px 16px",border:"1px solid rgba(255,255,255,.15)"},[
+        div({color:"rgba(255,255,255,.45)",fontSize:11,fontWeight:700,letterSpacing:".1em",textTransform:"uppercase",marginBottom:6},"Until rope drop"),
+        div({color:"#fff",fontSize:44,fontWeight:800,lineHeight:1,fontVariantNumeric:"tabular-nums",letterSpacing:"-1px",marginBottom:6}, formatHMS(msToRD)),
+        div({color:"rgba(255,255,255,.5)",fontSize:12}, nextUp?("Next: "+nextUp.title+" · "+nextUp.label):""),
+      ]),
+    ]);
+  }
+
+  // Phase 2 — action-aware
+  if(!cur) return div(hdrstyle,[
+    div({color:"rgba(255,255,255,.5)",fontSize:11,fontWeight:700,letterSpacing:".09em",textTransform:"uppercase",marginBottom:4},"Disneyland Resort · May 8, 2026"),
+    div({color:"#fff",fontSize:18,fontWeight:800},"🌙 All done — what a day!"),
+  ]);
+
+  var pc=PARK[cur.park]||PARK.dl;
+  var urg=cur.urgency?URGENCY[cur.urgency]:null;
+  var msToNext=next?msUntil(next):0;
+
+  // Trigger haptic if banner just appeared
+  if(urg&&state.lastBannerItem!==cur.id){
+    state.lastBannerItem=cur.id;
+    vibrate(cur.urgency==="critical"?[150,80,150]:cur.urgency==="high"?[100,50,100]:[60]);
+  }
+
+  var children=[
+    // Top: park + event name
+    div({marginBottom:10},[
+      div({color:"rgba(255,255,255,.45)",fontSize:11,fontWeight:700,letterSpacing:".1em",textTransform:"uppercase",marginBottom:2},"NOW · "+pc.name.toUpperCase()),
+      div({color:"#fff",fontSize:20,fontWeight:800,letterSpacing:"-.4px",lineHeight:1.15},cur.title),
+    ]),
+  ];
+
+  // Action banner (if any)
+  if(urg&&cur.action){
+    var bannerEl=div({background:urg.bg,borderRadius:12,padding:"10px 12px",marginBottom:10,border:"1px solid "+urg.border,boxShadow:"0 2px 12px rgba(0,0,0,.25)"},[
+      div({color:urg.text,fontSize:11,fontWeight:800,letterSpacing:".1em",textTransform:"uppercase",marginBottom:4,opacity:.8},urg.label),
+      div({color:"#fff",fontSize:13,fontWeight:700,lineHeight:1.4},cur.action),
+    ]);
+    bannerEl.className="action-banner";
+    children.push(bannerEl);
+  }
+
+  // Next up + countdown
+  var nextEl=div({background:"rgba(255,255,255,.1)",backdropFilter:"blur(10px)",borderRadius:12,padding:"10px 12px",border:"1px solid rgba(255,255,255,.12)",display:"flex",justifyContent:"space-between",alignItems:"center"},[
+    div({flex:1,minWidth:0},[
+      div({color:"rgba(255,255,255,.45)",fontSize:11,fontWeight:700,letterSpacing:".1em",textTransform:"uppercase",marginBottom:3},"NEXT UP"),
+      div({color:"rgba(255,255,255,.9)",fontSize:13,fontWeight:700,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"},next?next.title:"End of day"),
+      div({color:"rgba(255,255,255,.5)",fontSize:11},next?next.label:""),
+    ]),
+    div({textAlign:"right",paddingLeft:12,flexShrink:0},[
+      div({color:"#fff",fontSize:32,fontWeight:800,lineHeight:1,fontVariantNumeric:"tabular-nums",letterSpacing:"-1px"},next?formatCD(msToNext):""),
+      div({color:"rgba(255,255,255,.4)",fontSize:11},next?"away":""),
+    ]),
+  ]);
+  children.push(nextEl);
+
+  return div(hdrstyle,children);
+}
+
+function renderNotifCard(){
+
+  // Home screen banner — primary path to background notifications
+  var homeBanner = div({background:"linear-gradient(135deg,#312E81,#4338CA)",borderRadius:18,padding:"14px 16px",marginBottom:10,boxShadow:"0 2px 12px rgba(49,46,129,.3)"},[
+    div({display:"flex",alignItems:"center",gap:10,marginBottom:10},[
+      div({width:38,height:38,borderRadius:12,background:"rgba(255,255,255,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,flexShrink:0},"📱"),
+      div({flex:1},[
+        div({color:"#fff",fontSize:15,fontWeight:700},"Add to Home Screen first"),
+        div({color:"rgba(255,255,255,.65)",fontSize:12,lineHeight:1.4},"Enables background alerts when phone is locked"),
+      ]),
+      div({background:"rgba(255,255,255,.2)",borderRadius:20,padding:"3px 10px",fontSize:11,fontWeight:700,color:"#fff",flexShrink:0},"STEP 1"),
+    ]),
+    div({background:"rgba(255,255,255,.1)",borderRadius:12,padding:"10px 12px",border:"1px solid rgba(255,255,255,.15)"},[
+      div({color:"rgba(255,255,255,.5)",fontSize:11,fontWeight:700,letterSpacing:".08em",textTransform:"uppercase",marginBottom:6},"How to add"),
+      div({display:"flex",flexDirection:"column",gap:5},[
+        div({display:"flex",alignItems:"center",gap:8},[
+          div({width:20,height:20,borderRadius:"50%",background:"rgba(255,255,255,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:"#fff",flexShrink:0,fontWeight:700},"1"),
+          div({color:"rgba(255,255,255,.85)",fontSize:12},"Open this page in Safari"),
+        ]),
+        div({display:"flex",alignItems:"center",gap:8},[
+          div({width:20,height:20,borderRadius:"50%",background:"rgba(255,255,255,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:"#fff",flexShrink:0,fontWeight:700},"2"),
+          div({color:"rgba(255,255,255,.85)",fontSize:12},"Tap the Share icon ⎋ at the bottom"),
+        ]),
+        div({display:"flex",alignItems:"center",gap:8},[
+          div({width:20,height:20,borderRadius:"50%",background:"rgba(255,255,255,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:"#fff",flexShrink:0,fontWeight:700},"3"),
+          div({color:"rgba(255,255,255,.85)",fontSize:12},'Tap "Add to Home Screen" \u2192 Add'),
+        ]),
+        div({display:"flex",alignItems:"center",gap:8},[
+          div({width:20,height:20,borderRadius:"50%",background:"rgba(255,255,255,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:"#fff",flexShrink:0,fontWeight:700},"4"),
+          div({color:"rgba(255,255,255,.85)",fontSize:12},"Open from Home Screen, then activate alerts below"),
+        ]),
+      ]),
+    ]),
+  ]);
+
+  // Web notifications card
+  var webInner;
+  if(state.notifPerm==="unsupported"){
+    webInner=div({fontSize:13,color:"#6B7280",lineHeight:1.5},"Open this page in Safari and add to Home Screen to enable notifications.");
+  } else if(!state.webActive){
+    var isGranted=state.notifPerm==="granted";
+    webInner=div({display:"flex",gap:8},[
+      btn({flex:1,background:"#4338CA",color:"#fff",border:"none",borderRadius:12,padding:"13px",fontSize:15,fontWeight:700,cursor:"pointer",letterSpacing:"-.2px"},isGranted?"Activate Alerts":"Enable & Activate",function(){ activateWeb(); }),
+      btn({background:"#F3F4F6",color:"#374151",border:"none",borderRadius:10,padding:"13px 16px",fontSize:13,cursor:"pointer",minWidth:66},state.testSent?"✓ Sent":"Test",function(){ testNotif(); }),
+    ]);
+  } else {
+    webInner=div({display:"flex",alignItems:"center",justifyContent:"space-between"},[
+      div({display:"flex",alignItems:"center",gap:10},[
+        div({width:10,height:10,borderRadius:"50%",background:"#10B981",boxShadow:"0 0 0 3px #D1FAE5",flexShrink:0}),
+        div({},[
+          div({fontSize:14,fontWeight:700,color:"#065F46"},"Active — "+state.webCount+" alerts scheduled"),
+          div({fontSize:12,color:"#9CA3AF"},"Firing all day — keep app in background"),
+        ]),
+      ]),
+      btn({background:"none",border:"1px solid #E5E7EB",borderRadius:8,padding:"6px 12px",color:"#6B7280",fontSize:12,cursor:"pointer"},"Cancel",cancelWeb),
+    ]);
+  }
+
+  var webCard=div({background:"#fff",borderRadius:18,overflow:"hidden",boxShadow:"0 2px 12px rgba(0,0,0,.07)",marginBottom:10},[
+    div({background:"#1F2937",padding:"14px 16px 12px"},[
+      div({display:"flex",alignItems:"center",gap:10},[
+        div({width:36,height:36,borderRadius:10,background:"rgba(255,255,255,.1)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,flexShrink:0},"🔔"),
+        div({flex:1},[
+          div({color:"#fff",fontSize:15,fontWeight:700},"Activate Alerts"),
+          div({color:"rgba(255,255,255,.55)",fontSize:12},"All 25 events — fires before each action"),
+        ]),
+        div({background:"rgba(255,255,255,.1)",borderRadius:20,padding:"3px 10px",fontSize:11,fontWeight:700,color:"rgba(255,255,255,.7)",flexShrink:0},"STEP 2"),
+      ]),
+    ]),
+    div({padding:"12px 16px"},webInner),
+  ]);
+
+  // Once activated — collapse both sections into a single confirmation line
+  if(state.webActive){
+    return div({background:"#fff",borderRadius:16,padding:"12px 16px",
+      boxShadow:"0 1px 4px rgba(0,0,0,.06)",marginBottom:10,
+      display:"flex",alignItems:"center",justifyContent:"space-between"},[
+      div({display:"flex",alignItems:"center",gap:10},[
+        div({width:10,height:10,borderRadius:"50%",background:"#10B981",
+          boxShadow:"0 0 0 3px #D1FAE5",flexShrink:0}),
+        div({},[
+          div({fontSize:14,fontWeight:700,color:"#065F46"},"Alerts active — "+state.webCount+" scheduled"),
+          div({fontSize:12,color:"#9CA3AF"},"Firing all day · keep app open in background"),
+        ]),
+      ]),
+      btn({background:"none",border:"1px solid #E5E7EB",borderRadius:8,
+        padding:"6px 12px",color:"#9CA3AF",fontSize:12,cursor:"pointer"},"Cancel",cancelWeb),
+    ]);
+  }
+
+  return div({},[homeBanner, webCard]);
+}
+
+function renderMPChain(){
+  var chips=ITEMS.filter(function(i){ return i.mp; }).map(function(item){
+    var st=getStatus(item),done=st==="past",act=st==="active"||st==="soon";
+    return div({
+      padding:"5px 10px",borderRadius:20,fontSize:12,fontWeight:700,flexShrink:0,
+      background:done?"#D1FAE5":act?"#4338CA":"#F3F4F6",
+      color:done?"#065F46":act?"#fff":"#9CA3AF",
+      border:done?"1px solid #6EE7B7":act?"none":"1px solid #E5E7EB",
+      transition:"all .3s",
+    },done?("✓ "+item.mp):item.mp);
+  });
+  return div({background:"#fff",borderRadius:16,padding:"12px 14px",boxShadow:"0 1px 4px rgba(0,0,0,.06)",marginBottom:12},[
+    div({fontSize:11,fontWeight:800,letterSpacing:".08em",textTransform:"uppercase",color:"#9CA3AF",marginBottom:9},"Lightning Lane Chain — 8 MPs"),
+    div({display:"flex",gap:6,flexWrap:"wrap"},chips),
+  ]);
+}
+
+function renderTimeline(){
+  return div({},ITEMS.map(function(item,idx){
+    var status=getStatus(item);
+    var pc=PARK[item.park]||PARK.dl;
+    var pass=item.pass?(PASSC[item.pass]||{bg:"#F3F4F6",text:"#374151",label:item.pass}):null;
+    var isExp=state.expanded===item.id;
+    var isLate=item.park==="late";
+    var isPast=status==="past";
+    var isAct=status==="active"||status==="soon";
+    var urg=item.urgency?URGENCY[item.urgency]:null;
+
+    // Main card
+    var card=div({
+      background:isLate?"#1C2333":"#fff",
+      borderRadius:14,overflow:"hidden",
+      border:isAct?("2px solid "+pc.dot):"2px solid transparent",
+      boxShadow:isAct?("0 0 0 4px "+(isLate?"rgba(107,114,128,.15)":pc.bg)+",0 4px 16px rgba(0,0,0,.1)"):"0 1px 3px rgba(0,0,0,.07)",
+      cursor:"pointer",transition:"all .2s",
+      WebkitUserSelect:"none",userSelect:"none",
+    });
+    card.addEventListener("click",function(){
+      state.expanded=(isExp?null:item.id); render();
+    });
+
+    // Row content
+    var timeEl=div({minWidth:66,paddingTop:1},[
+      div({fontSize:12,fontWeight:700,color:isLate?"#9CA3AF":"#374151",fontVariantNumeric:"tabular-nums"},item.label),
+      item.mp?div({fontSize:11,fontWeight:700,color:"#10B981",marginTop:2},item.mp):null,
+    ]);
+
+    var dotEl=div({display:"flex",flexDirection:"column",alignItems:"center",paddingTop:5,flexShrink:0},[
+      div({
+        width:isAct?12:8,height:isAct?12:8,borderRadius:"50%",
+        background:isPast?"#D1D5DB":pc.dot,
+        boxShadow:isAct?("0 0 0 3px "+pc.bg):"none",
+        transition:"all .3s",
+        className:isAct?"now-dot":"",
+      }),
+      idx<ITEMS.length-1?div({width:1.5,height:22,background:isLate?"#374151":"#E5E7EB",marginTop:3}):null,
+    ]);
+
+    var badges=div({display:"flex",gap:5,flexWrap:"wrap",marginTop:6},[
+      div({fontSize:11,fontWeight:600,padding:"3px 8px",borderRadius:20,background:isLate?"rgba(255,255,255,.08)":pc.bg,color:isLate?"#9CA3AF":pc.text,minHeight:22},pc.name),
+      pass?div({fontSize:11,fontWeight:600,padding:"3px 8px",borderRadius:20,background:pass.bg,color:pass.text,minHeight:22},pass.label):null,
+      isAct?div({fontSize:11,fontWeight:700,padding:"3px 8px",borderRadius:20,background:pc.dot,color:"#fff",animation:"pulse 1.8s infinite",minHeight:22},"NOW"):null,
+    ]);
+
+    var content=div({flex:1,minWidth:0},[
+      div({fontSize:15,fontWeight:700,color:isLate?"#F9FAFB":"#111827",lineHeight:1.2,marginBottom:3},item.title),
+      div({fontSize:12,color:isLate?"#6B7280":"#6B7280"},item.subtitle),
+      badges,
+    ]);
+
+    var chevron=div({color:isLate?"#4B5563":"#D1D5DB",fontSize:11,paddingTop:4,flexShrink:0},isExp?"▲":"▼");
+
+    var row=div({display:"flex",alignItems:"flex-start",padding:"13px 14px",gap:10,minHeight:72},[timeEl,dotEl,content,chevron]);
+    card.appendChild(row);
+
+    // Expanded detail
+    if(isExp){
+      var detail=div({
+        borderTop:isLate?"1px solid #374151":"1px solid #F3F4F6",
+        padding:"12px 14px 14px 90px",
+        background:isLate?"#161D2F":"#FAFAFA",
+      });
+      var detailTxt=document.createElement("p");
+      detailTxt.textContent=item.details;
+      detailTxt.style.cssText="font-size:13px;color:"+(isLate?"#9CA3AF":"#4B5563")+";line-height:1.6;margin:0 0 10px";
+      detail.appendChild(detailTxt);
+
+      if(item.action&&urg){
+        var actBox=div({background:isLate?"#1C2333":urg.bg,borderRadius:10,padding:"10px 12px",borderLeft:"3px solid "+urg.border,marginBottom:8},[
+          div({fontSize:11,fontWeight:800,color:urg.border,letterSpacing:".07em",textTransform:"uppercase",marginBottom:3},urg.label),
+          div({fontSize:13,fontWeight:700,color:isLate?"#F9FAFB":"#fff",lineHeight:1.4},item.action),
+        ]);
+        detail.appendChild(actBox);
+      }
+
+      var alertNote=div({fontSize:11,color:isLate?"#4B5563":"#9CA3AF",display:"flex",alignItems:"center",gap:6},[
+        txt("span",{},"🔔"),
+        txt("span",{},"Alert fires "+(item.notifyBefore>0?(item.notifyBefore+" min before"):"at event time")),
+      ]);
+      detail.appendChild(alertNote);
+      card.appendChild(detail);
+    }
+
+    return div({marginBottom:7,opacity:isPast?.4:1,transition:"opacity .3s"},card);
+  }));
+}
+
+function render(){
+  var app=document.getElementById("app");
+  app.innerHTML="";
+
+  // Outer wrapper
+  var wrap=div({maxWidth:430,margin:"0 auto",minHeight:"100vh",background:"#F2F2F7",paddingBottom:"env(safe-area-inset-bottom,20px)"});
+
+  // Header
+  wrap.appendChild(renderHeader());
+
+  // Scroll content
+  var scroll=div({padding:"12px 16px 120px"});
+  scroll.appendChild(renderNotifCard());
+  scroll.appendChild(renderMPChain());
+
+  // Section label
+  var secLabel=div({fontSize:11,fontWeight:800,letterSpacing:".08em",textTransform:"uppercase",color:"#9CA3AF",marginBottom:10,paddingLeft:2},"Full Itinerary — tap any row to expand");
+  scroll.appendChild(secLabel);
+
+  scroll.appendChild(renderTimeline());
+
+  // Footer
+  var footer=div({textAlign:"center",paddingTop:12},[
+    div({fontSize:11,color:"#9CA3AF",lineHeight:1.8},"Verified · 35% forecast crowd · Fantasmic confirmed May 8"),
+    div({fontSize:11,color:"#BBBBBB"},"All closures checked May 2, 2026"),
+  ]);
+  scroll.appendChild(footer);
+  wrap.appendChild(scroll);
+  app.appendChild(wrap);
+}
+
+// ── Tick ──────────────────────────────────────────────────────────────────────
+var lastPhase=isRopeDrop();
+var lastActiveId=null;
+
+
+
+// Since patching isn't reliable across full re-renders, just re-render every second
+// but do it efficiently by only updating the parts that change
+setInterval(function(){
+  state.now=Date.now();
+  var curPhase=isRopeDrop();
+  var cur=currentItem();
+  var curId=cur?cur.id:null;
+  if(curPhase!==lastPhase||curId!==lastActiveId){
+    lastPhase=curPhase; lastActiveId=curId;
+  }
+  render();
+},1000);
+
+// Initial render
+render();
+</script>
+</body>
+</html>
